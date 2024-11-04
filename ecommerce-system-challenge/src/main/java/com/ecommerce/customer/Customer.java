@@ -17,7 +17,7 @@ public class Customer {
     }
 
     public void decreaseBalance(double balance){
-        this.balance = balance;
+        this.balance -= balance;
     }
 
 }
