@@ -34,16 +34,19 @@ public class Main {
         Cart cart = new Cart();
 
 
+
         CartService cartService = new CartService();
 
         ShippingService shippingService = new ShippingService();
         CheckoutService checkoutService = new CheckoutService(cartService , shippingService);
 
         try {
-            cartService.addItemToCart(cart , tv , 1);
-            cartService.addItemToCart(cart , mobile , 1);
-            cartService.addItemToCart(cart , mobileScratchCard , 5);
-            cartService.addItemToCart(cart , biscuits , 3);
+            for (int i = 0; i < 2; ++i) {
+                cartService.addItemToCart(cart, tv, 1);
+                cartService.addItemToCart(cart, mobile, 1);
+                cartService.addItemToCart(cart, mobileScratchCard, 5);
+                cartService.addItemToCart(cart, biscuits, 3);
+            }
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
