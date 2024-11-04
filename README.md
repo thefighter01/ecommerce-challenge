@@ -1,12 +1,18 @@
 # ecommerce-challenge
 
 the UML class diagram for the E-commerce system classes.
+
+![Uml diagram photo](./img.jpg)
+
+
 ### 1. **Product (Abstract Class)**
- - **Attributes**: `name: String`, `price: double`, `quantity: int`
- - **Methods**: `getName()`, `getPrice()`, `getQuantity()`, `reduceQuantity(int)`, `isAvailable(int)`, `isExpire### 2. **ExpirableProduct (Abstract Class)**
- - **Inherits**: `Product`
- - **Attributes**: `expiryDate: Date`
- - **Methods**: `isExpired()`
+   - **Attributes**: `name: String`, `price: double`, `quantity: int`
+   - **Methods**: `getName()`, `getPrice()`, `getQuantity()`, `reduceQuantity(int)`, `isAvailable(int)`, `isExpired()`, `requiresShipping()`
+
+### 2. **ExpirableProduct (Abstract Class)**
+   - **Inherits**: `Product`
+   - **Attributes**: `expiryDate: Date`
+   - **Methods**: `isExpired()`
 ### 3. **NonExpirableProduct (Class)**
  - **Inherits**: `Product`
  - **Methods**: `isExpired()`
@@ -32,5 +38,5 @@ the UML class diagram for the E-commerce system classes.
  - **Attributes**: `SHIPPING_FEE_PER_KG: double`
  - **Methods**: `checkout(Customer, Cart)`
  
-![Alt text](./img.png)
+
 
